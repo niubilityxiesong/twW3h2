@@ -21,6 +21,10 @@ public class Klass {
         return result;
     }
     void assignLeader(Student std){
+        if(std.klass.klassnum != klassnum){
+            System.out.print("It is not one of us.\n");
+            return;
+        }
         std.klass.leader = true;
     }
     Student getLeader(Student std){
@@ -31,13 +35,7 @@ public class Klass {
             return null;
     }
     void appendMember(Student std){
-
-        if(std.klass.klassnum != klassnum){
-            System.out.print("It is not one of us.\n");
-        }
-        else
-            System.out.print("123\n");
-
+        std.klass.klassnum = klassnum;
     }
 
 }
