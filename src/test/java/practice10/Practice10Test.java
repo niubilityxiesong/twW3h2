@@ -57,7 +57,7 @@ public class Practice10Test {
         klass2.assignLeader(jerry);
 
         assertThat(systemOut()).isEqualTo("It is not one of us.\n");
-        assertThat(klass2.getLeader(jerry)).isNotEqualTo(jerry);
+        assertThat(klass2.getLeader()).isNotEqualTo(jerry);
     }
 
     private String systemOut() {
@@ -69,7 +69,7 @@ public class Practice10Test {
         Student jerry = new Student(1, "Jerry", 8, klass2);
         klass2.appendMember(jerry);
         klass2.assignLeader(jerry);
-        assertThat(klass2.getLeader(jerry)).isEqualTo(jerry);
+        assertThat(klass2.getLeader()).isEqualTo(jerry);
     }
 
     @Test

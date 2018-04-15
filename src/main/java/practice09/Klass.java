@@ -4,6 +4,7 @@ public class Klass {
 
     int klassnum;
     boolean leader;
+    Student stdin;
 
     public Klass(int num){
         klassnum = num;
@@ -27,14 +28,15 @@ public class Klass {
         }
         std.klass.leader = true;
     }
-    Student getLeader(Student std){
-        if(std.klass.leader){
-            return std;
+    Student getLeader(){
+        if(this.leader){
+            return stdin;
         }
         else
             return null;
     }
     void appendMember(Student std){
+        stdin = std;
         std.klass.klassnum = klassnum;
     }
 

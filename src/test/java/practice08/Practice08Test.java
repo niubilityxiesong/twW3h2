@@ -48,7 +48,7 @@ public class Practice08Test {
     public void should_class_assign_a_leader() throws Exception {
         Student jerry = new Student(1, "Jerry", 8, klass);
         klass.assignLeader(jerry);
-        assertThat(klass.getLeader(jerry)).isEqualTo(jerry);
+        assertThat(klass.getLeader()).isEqualTo(jerry);
     }
 
     @Test
