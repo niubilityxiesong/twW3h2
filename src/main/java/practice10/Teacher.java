@@ -1,6 +1,9 @@
 package practice10;
 
 import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Teacher extends Person{
 
@@ -29,11 +32,12 @@ public class Teacher extends Person{
     String introduce(){
         String result = super.introduce();
         int length = classes.size();
+        List<Klass> numbe1 = classes.stream().sorted((x, y) -> x.klassnum - y.klassnum).collect(Collectors.toList());
 
         if(length > 0){
             result += " I am a Teacher. I teach Class ";
-            for(Klass klass:classes){
-                result += String.valueOf(klass.getNumber());
+            for(int i = 0; i < length; i++){
+                result += String.valueOf(numbe1.get(i).klassnum);
                 result += ", ";
             }
             result = result.substring(0,result.length() - 2);
