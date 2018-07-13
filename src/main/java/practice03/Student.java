@@ -14,7 +14,7 @@ public class Student extends Person{
         return klass;
     }
     String introduce(){
-        String result = "I am a Student. I am at Class ";
+        String result = "I am Student. I am at Class ";
 
         result += String.valueOf(klass);
         result += ".";
